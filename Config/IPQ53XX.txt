@@ -8,10 +8,21 @@ CONFIG_KERNEL_SND=y
 CONFIG_PACKAGE_kmod-media-controller=y
 CONFIG_PACKAGE_kmod-sound-core=y
 CONFIG_PACKAGE_kmod-usb-audio=y
+# 1. 蓝牙核心协议栈 (必需)
+CONFIG_PACKAGE_kmod-bluetooth=y
+
+# 2. USB 蓝牙传输驱动 (适用于USB适配器)
+CONFIG_PACKAGE_kmod-btusb=y
+
+# 3. 用户空间工具 (用于管理、扫描、配对)
+CONFIG_PACKAGE_bluez-daemon=y
+CONFIG_PACKAGE_bluez-utils=y
+CONFIG_PACKAGE_bluez-libs=y
+
+# 4. 内核底层蓝牙子系统支持
 CONFIG_KERNEL_BT=y
-CONFIG_KERNEL_BT_BREDR=y          # 经典蓝牙（手柄、音箱、老设备）
-CONFIG_KERNEL_BT_LE=y             # BLE（手环、传感器、信标）
-CONFIG_KERNEL_BT_HCIBTUSB=m       # USB 适配器驱动
+CONFIG_KERNEL_BT_BREDR=y
+CONFIG_KERNEL_BT_LE=y
 #设备列表
 CONFIG_TARGET_DEVICE_qualcommbe_ipq53xx_DEVICE_jdcloud_re-cs-06=y
 CONFIG_TARGET_DEVICE_qualcommbe_ipq53xx_DEVICE_jdcloud_re-cs-08=y
