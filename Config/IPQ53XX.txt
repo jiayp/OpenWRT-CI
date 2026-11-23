@@ -8,6 +8,10 @@ CONFIG_KERNEL_SND=y
 CONFIG_PACKAGE_kmod-media-controller=y
 CONFIG_PACKAGE_kmod-sound-core=y
 CONFIG_PACKAGE_kmod-usb-audio=y
+CONFIG_KERNEL_BT=y
+CONFIG_KERNEL_BT_BREDR=y          # 经典蓝牙（手柄、音箱、老设备）
+CONFIG_KERNEL_BT_LE=y             # BLE（手环、传感器、信标）
+CONFIG_KERNEL_BT_HCIBTUSB=m       # USB 适配器驱动
 #设备列表
 CONFIG_TARGET_DEVICE_qualcommbe_ipq53xx_DEVICE_jdcloud_re-cs-06=y
 CONFIG_TARGET_DEVICE_qualcommbe_ipq53xx_DEVICE_jdcloud_re-cs-08=y
